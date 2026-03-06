@@ -1,4 +1,4 @@
-# Aman's Skills
+# Sajith's Skills
 
 My Claude Code setup — plugins, skills, and the config that ties them together.
 
@@ -49,10 +49,10 @@ claude plugin enable explanatory-output-style@claude-plugins-official
 claude plugin enable plugin-dev@claude-plugins-official
 
 # This repo (clone first)
-git clone https://github.com/amanaiproduct/amans-skills ~/Projects/amans-skills
-claude plugin add dir:~/Projects/amans-skills
-claude plugin enable plugin-dashboard@amans-plugins
+git clone https://github.com/sajith/sajith-skills ~/Projects/sajith-skills
+claude plugin add dir:~/Projects/sajith-skills
+claude plugin enable plugin-dashboard@sajith-plugins
 
 # Skills
-cp -r ~/Projects/amans-skills/skills/* ~/.claude/skills/
+cp -r ~/Projects/sajith-skills/skills/* ~/.claude/skills/
 ```
