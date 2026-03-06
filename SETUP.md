@@ -5,7 +5,7 @@ You are setting up Sajith's Claude Code skills and plugins on this machine. Walk
 Check if the repo is already cloned. If not, clone it:
 
 ```bash
-git clone https://github.com/sajith/sajith-skills ~/Projects/sajith-skills
+git clone https://github.com/sajithkaimal/-sajith-skills ~/Projects/sajith-skills
 ```
 
 ## Step 2: Add Plugin Marketplaces

@@ -49,7 +49,7 @@ claude plugin enable explanatory-output-style@claude-plugins-official
 claude plugin enable plugin-dev@claude-plugins-official
 
 # This repo (clone first)
-git clone https://github.com/sajith/sajith-skills ~/Projects/sajith-skills
+git clone https://github.com/sajithkaimal/-sajith-skills ~/Projects/sajith-skills
 claude plugin add dir:~/Projects/sajith-skills
 claude plugin enable plugin-dashboard@sajith-plugins
 
