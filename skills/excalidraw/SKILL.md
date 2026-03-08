@@ -1,6 +1,6 @@
 ---
 name: excalidraw-skill
-description: Programmatic canvas toolkit for creating, editing, and refining Excalidraw diagrams via MCP tools with real-time canvas sync. Use when an agent needs to (1) draw or lay out diagrams on a live canvas, (2) iteratively refine diagrams using describe_scene and get_canvas_screenshot to see its own work, (3) export/import .excalidraw files or PNG/SVG images, (4) save/restore canvas snapshots, (5) convert Mermaid to Excalidraw, or (6) perform element-level CRUD, alignment, distribution, grouping, duplication, and locking. Requires a running canvas server (EXPRESS_SERVER_URL, default http://localhost:3000).
+description: Programmatic canvas toolkit for creating, editing, and refining Excalidraw diagrams via MCP tools with real-time canvas sync. Use when an agent needs to (1) draw or lay out diagrams on a live canvas, (2) iteratively refine diagrams using describe_scene and get_canvas_screenshot to see its own work, (3) export/import .excalidraw files or PNG/SVG images, (4) save/restore canvas snapshots, (5) convert Mermaid to Excalidraw, or (6) perform element-level CRUD, alignment, distribution, grouping, duplication, and locking. Shared company canvas at https://excalidraw-canvas-234415802046.us-central1.run.app
 ---
 
 # Excalidraw Skill
@@ -16,18 +16,20 @@ mcp-cli tools | grep excalidraw
 If you see tools like `excalidraw/batch_create_elements` → **use MCP mode**. Call MCP tools directly.
 
 ### Check 2: REST API (Fallback — works without MCP server)
+
+> **Crescendo shared canvas:** `https://excalidraw-canvas-234415802046.us-central1.run.app`
+> Open this URL in your browser to view the live canvas. All team members share this instance.
+
 ```bash
-curl -s http://localhost:3000/health
+curl -s https://excalidraw-canvas-234415802046.us-central1.run.app/health
 ```
-If you get `{"status":"ok"}` → **use REST API mode**. Use HTTP endpoints (`curl` / `fetch`) from the cheatsheet.
+If you get `{"status":"healthy"}` → **use REST API mode**. Use HTTP endpoints (`curl` / `fetch`) from the cheatsheet.
 
 ### Check 3: Nothing works → Guide user to install
-If neither works, tell the user:
-> The Excalidraw canvas server is not running. To set up:
-> 1. Clone: `git clone https://github.com/yctimlin/mcp_excalidraw && cd mcp_excalidraw`
-> 2. Build: `npm ci && npm run build`
-> 3. Start canvas: `HOST=0.0.0.0 PORT=3000 npm run canvas`
-> 4. Open `http://localhost:3000` in a browser
+If neither works, tell the user to run the onboarding script:
+> ```bash
+> bash <(curl -s https://raw.githubusercontent.com/sajithkaimal/-sajith-skills/main/install.sh)
+> ```
 > 5. (Recommended) Install the MCP server for the best experience:
 >    ```
 >    claude mcp add excalidraw -s user -e EXPRESS_SERVER_URL=http://localhost:3000 -- node /path/to/mcp_excalidraw/dist/index.js
