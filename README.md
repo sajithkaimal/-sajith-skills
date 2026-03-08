@@ -6,7 +6,8 @@ My Claude Code setup — plugins, skills, and the config that ties them together
 **Skills** are prompt templates you invoke on demand (like `/ccusage` or `/excalidraw`).
 
 ## What's Included
-<img width="964" height="552" alt="Screenshot 2026-02-15 at 4 20 26 PM" src="https://github.com/user-attachments/assets/9507ecd0-9980-4093-a975-a6fb0fd434f0" />
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/38ebc5d7-e468-4f0c-ba5a-8bf7a15a1d23" />
+
 
 ### Plugins
 
